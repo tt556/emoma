@@ -377,7 +377,7 @@
                         <outlet property="collectionView3" destination="HaV-eF-NY3" id="D1g-9I-AEG"/>
                         <outlet property="collectionView4" destination="wq4-Kk-4uB" id="pX3-3o-FEN"/>
                         <outlet property="collectionView5" destination="Kx5-j2-EWx" id="UdX-sV-7pV"/>
-                        <segue destination="2b4-WL-Oti" kind="show" identifier="goToProfile" id="Mgh-es-4Ye"/>
+                        <segue destination="2b4-WL-Oti" kind="show" identifier="goToProfile" id="oFV-UW-fX9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -456,14 +456,14 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最近のPUSH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-2k-PgH">
-                                                <rect key="frame" x="8" y="444" width="125" height="21"/>
+                                                <rect key="frame" x="8" y="444" width="367" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOn-4b-K8p">
-                                                <rect key="frame" x="198" y="482" width="169" height="237"/>
+                                                <rect key="frame" x="197" y="493" width="170" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQe-zm-6qW">
@@ -473,11 +473,6 @@
                                                 <connections>
                                                     <action selector="testButton:" destination="2b4-WL-Oti" eventType="touchUpInside" id="xdY-CD-EGh"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ae-MC-F2h">
-                                                <rect key="frame" x="8" y="493" width="163" height="274"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="image1"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyU-CY-eeI">
                                                 <rect key="frame" x="163" y="1173" width="48" height="30"/>
@@ -508,10 +503,14 @@
                                                 <rect key="frame" x="33" y="21" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q5g-cu-Gw4">
-                                                <rect key="frame" x="25" y="1211" width="233" height="359"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ae-MC-F2h">
+                                                <rect key="frame" x="8" y="493" width="170" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                                <state key="normal" title="Button" image="image1"/>
+                                                <connections>
+                                                    <action selector="videoButton1:" destination="2b4-WL-Oti" eventType="touchUpInside" id="O8N-E2-uJg"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -540,12 +539,13 @@
                     <navigationItem key="navigationItem" id="dd8-3s-Sg2"/>
                     <size key="freeformSize" width="375" height="2001"/>
                     <connections>
+                        <outlet property="labelForLatestVideos" destination="uEf-2k-PgH" id="5Zz-H0-Os7"/>
                         <outlet property="nameCategoryLabel" destination="E7h-Pa-taX" id="jK5-oN-JxW"/>
                         <outlet property="profileDetailLabel" destination="ioB-0t-zZY" id="581-3L-KVt"/>
                         <outlet property="profileImage" destination="sKw-fY-lb9" id="169-O5-IHo"/>
                         <outlet property="reactionLabel" destination="Ogy-EZ-HLh" id="uf0-TJ-Qxd"/>
                         <outlet property="scrollView" destination="grv-9D-Kmu" id="LIK-Vb-STs"/>
-                        <outlet property="testImage" destination="q5g-cu-Gw4" id="cZ8-mg-zJN"/>
+                        <outlet property="videoButton1" destination="3ae-MC-F2h" id="JDY-ik-Rji"/>
                         <outlet property="view2" destination="I0b-KS-0Yj" id="als-g3-9Gh"/>
                         <segue destination="d0J-0q-nIV" kind="show" identifier="goToInfomationController" id="KR7-f5-dRB"/>
                     </connections>

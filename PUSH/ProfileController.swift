@@ -21,13 +21,23 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var reactionLabel: UILabel!
     @IBOutlet weak var profileDetailLabel: UILabel!
     @IBOutlet weak var view2: UIView!
+    @IBOutlet weak var labelForLatestVideos: UILabel!
     
     @IBOutlet weak var testImage: UIImageView!
+    @IBOutlet weak var videoButton1: UIButton!
     
     var selectedImage: UIImage?
+    var passedCategory: String?
     var passedTID: String?
     
     let reference = Database.database().reference()
+    
+    let videoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.cornerRadius = 8
+        return imageView
+    }()
+    
     
     let gradationLayer: CAGradientLayer = {
         let layer = CAGradientLayer()
@@ -43,6 +53,8 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("これは受け渡されたcategoryです！：\(passedCategory)")
+
         print("これは受け渡されたTIDです！：\(passedTID)")
         fetchProfileImage()
         
@@ -131,8 +143,7 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
         howManyDaysToSendLabel.centerYAnchor.constraint(equalTo: purchaseButton.centerYAnchor).isActive = true
 
         view.addSubview(view1)
-        setUpPurchaseButton()
-
+        view.addSubview(videoImageView)
 
         
         
@@ -142,24 +153,20 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
         
         //NavigationBar設定
         navigationController?.setNavigationBarHidden(false, animated: true)
-        let nameRef = reference.child("talents").child("category").child("YouTuber").child(passedTID!).child("tname")
+        let nameRef = reference.child("talents").child("category").child(passedCategory!).child(passedTID!).child("tname")
         nameRef.observeSingleEvent(of: .value) { (snapshot) in
             let tname: String = snapshot.value as! String
             self.navigationItem.title = tname
             self.nameCategoryLabel.text = tname
         }
         
-        let detailLabelRef = reference.child("talents").child("category").child("YouTuber").child(passedTID!).child("ttext")
+        let detailLabelRef = reference.child("talents").child("category").child(passedCategory!).child(passedTID!).child("ttext")
         detailLabelRef.observeSingleEvent(of: .value) { (snapshot) in
             let detailText: String = snapshot.value as! String
             self.profileDetailLabel.text = detailText
         }
         
-        if let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/push-bc760.appspot.com/o/IMG_5423.MOV?alt=media&token=b4027c05-538e-4edf-b312-3c5d55e4f84d") {
-            testImage.image = thumnailImageForFileUrl(fileUrl: url)
-            print("画像の横サイズ ",testImage.frame.width)
-            print("縦サイズ",testImage.frame.height)
-        }
+        setThumbnail()
         
         
     }
@@ -170,7 +177,7 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
 //    }()
     
     func fetchProfileImage() {
-        let ref = reference.child("talents").child("category").child("YouTuber").child(passedTID!).child("tfile")
+        let ref = reference.child("talents").child("category").child(passedCategory!).child(passedTID!).child("tfile")
         ref.observe(.value) { (snapshot) in
             
             let url: String = snapshot.value as! String
@@ -220,35 +227,27 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
             infomationVC.passedTID = passedTID
     }
     }
-    func setUpPurchaseButton() {
-        
-
+    
+    func setThumbnail() {
+        if let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/push-bc760.appspot.com/o/IMG_5423.MOV?alt=media&token=b4027c05-538e-4edf-b312-3c5d55e4f84d") {
+            let image = thumnailImageForFileUrl(fileUrl: url)
+//            image?.imageOrientation = image!.imageOrientation
+            self.videoButton1.setImage(image, for: .normal)
+        }
     }
     
+    
     func updateNameCategoryLabel(){
-        
-        
         
     }
     
     @IBAction func followButton(_ sender: Any) {
-        
-        if let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/push-bc760.appspot.com/o/SampleVideo_1280x720_10mb.mp4?alt=media&token=4b394063-3ce0-426a-9b28-abd9d2d7a748") {
-            let video = AVPlayer(url: url)
-            let videoPlayer = AVPlayerViewController()
-            videoPlayer.player = video
-            present(videoPlayer, animated: true) {
-                video.play()
-            }
-        }
         
     }
     
     
     
     @IBAction func buttonToSeeAllReaction(_ sender: Any) {
-        
-        
         
     }
     
@@ -300,6 +299,17 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
         
         let loginController = LoginController()
         present(loginController, animated: true, completion: nil)
+    }
+    
+    @IBAction func videoButton1(_ sender: Any) {
+        if let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/push-bc760.appspot.com/o/SampleVideo_1280x720_10mb.mp4?alt=media&token=4b394063-3ce0-426a-9b28-abd9d2d7a748") {
+            let video = AVPlayer(url: url)
+            let videoPlayer = AVPlayerViewController()
+            videoPlayer.player = video
+            present(videoPlayer, animated: true) {
+                video.play()
+            }
+        }
     }
     
 }

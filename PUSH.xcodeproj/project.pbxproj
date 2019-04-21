@@ -17,6 +17,7 @@
 		FF751689225B6FAE000C6052 /* informationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF751688225B6FAE000C6052 /* informationController.swift */; };
 		FF75168B225DCE7B000C6052 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF75168A225DCE7B000C6052 /* User.swift */; };
 		FF75168D225DF942000C6052 /* InfomationController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF75168C225DF941000C6052 /* InfomationController+handlers.swift */; };
+		FFA30C48226B803100028248 /* AVAsset+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA30C47226B803000028248 /* AVAsset+.swift */; };
 		FFAB55B0226471340006E525 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAB55AF226471330006E525 /* TestController.swift */; };
 		FFAB55B22266F1E90006E525 /* ProfileController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAB55B12266F1E90006E525 /* ProfileController+handlers.swift */; };
 		FFDB75A9222940060084A90E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDB75A8222940060084A90E /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		FF751688225B6FAE000C6052 /* informationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = informationController.swift; sourceTree = "<group>"; };
 		FF75168A225DCE7B000C6052 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		FF75168C225DF941000C6052 /* InfomationController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InfomationController+handlers.swift"; sourceTree = "<group>"; };
+		FFA30C47226B803000028248 /* AVAsset+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAsset+.swift"; sourceTree = "<group>"; };
 		FFAB55AF226471330006E525 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		FFAB55B12266F1E90006E525 /* ProfileController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileController+handlers.swift"; sourceTree = "<group>"; };
 		FFDB75A5222940060084A90E /* PUSH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PUSH.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 				FFDB75AA222940070084A90E /* ViewController.swift */,
 				FF4BDD4922423B2D00D1A5EA /* ProfileController.swift */,
 				FFAB55B12266F1E90006E525 /* ProfileController+handlers.swift */,
+				FFA30C47226B803000028248 /* AVAsset+.swift */,
 				FF751688225B6FAE000C6052 /* informationController.swift */,
 				FF75168C225DF941000C6052 /* InfomationController+handlers.swift */,
 				FF313951225B39ED009D119E /* Controller */,
@@ -267,6 +270,7 @@
 				FF751689225B6FAE000C6052 /* informationController.swift in Sources */,
 				FF4BDD4A22423B2D00D1A5EA /* ProfileController.swift in Sources */,
 				FFAB55B22266F1E90006E525 /* ProfileController+handlers.swift in Sources */,
+				FFA30C48226B803100028248 /* AVAsset+.swift in Sources */,
 				FF75168D225DF942000C6052 /* InfomationController+handlers.swift in Sources */,
 				FF313958225B3DD4009D119E /* LoginController+handlers.swift in Sources */,
 				FFAB55B0226471340006E525 /* TestController.swift in Sources */,
