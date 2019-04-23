@@ -17,12 +17,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView3: UICollectionView!
     @IBOutlet weak var collectionView4: UICollectionView!
     @IBOutlet weak var collectionView5: UICollectionView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     let storage = Storage.storage()
     let db = Firestore.firestore()
     var selectedCategory: String?
 
     var selectedTID: String?
+    
+    let refreshControl = UIRefreshControl()
     
     //ホーム画面に優先表示したいタレントのTID
     let YouTubersTIDs = ["-LcUqTRrrUf-SFf_6TWu", "-LcVHbB4NHJQfmwWsSap", "-LcxlTSxXG7YbWy_FQen", "-LcxlTSxXG7YbWy_FQen", "-LcxlTSxXG7YbWy_FQen", "-LcxlTSxXG7YbWy_FQen", "-LcxlTSxXG7YbWy_FQen", "-LcxlTSxXG7YbWy_FQen"]
@@ -48,11 +51,30 @@ class ViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
         self.automaticallyAdjustsScrollViewInsets = false
 
-        
+        //refreshControl
+        scrollView.refreshControl = refreshControl
+        refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        scrollView.addSubview(refreshControl)
         
         checkIfUserIsLoggedIn()
         
     }
+    
+    @objc func refresh() {
+       
+        DispatchQueue.main.async {
+            self.scrollView.reloadInputViews()
+            self.feedbackGenerator.impactOccurred()
+            self.scrollView.refreshControl?.endRefreshing()
+        }
+    }
+    private let feedbackGenerator: UIImpactFeedbackGenerator = {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        return generator
+    }()
+
     
     func checkIfUserIsLoggedIn() {
         //ユーザーがログインしていない場合(currentUserのuidがデータベースにない場合)、自動的にLoginControllerにpresentさせる
@@ -135,6 +157,7 @@ extension ViewController: UICollectionViewDataSource {
         
         let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath)
             let imageView1 = cell1.contentView.viewWithTag(1) as! UIImageView
+            
             let reference = Database.database().reference().child("talents").child("category").child(selectedCategory)
             let tPath = reference.child(YouTubersTIDs[indexPath.row]).child("tfile")
             tPath.observe(.value) { (url) in
@@ -229,16 +252,10 @@ extension ViewController: UICollectionViewDataSource {
             return cell3
             
         }else if collectionView == self.collectionView4 {
-            print("タグは4です")
             let cell4 = collectionView4.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell4", for: indexPath)
-            
-            
             return cell4
         }else if collectionView == self.collectionView5 {
-            print("タグは5です")
             let cell5 = collectionView5.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell5", for: indexPath)
-            
-            
             return cell5
         }
         

@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 import AVFoundation
 import AVKit
-import WebKit
 
 class ProfileController: UIViewController, UIScrollViewDelegate {
     
@@ -23,14 +22,24 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var labelForLatestVideos: UILabel!
     
-    @IBOutlet weak var testImage: UIImageView!
+    @IBOutlet weak var videoButton0: UIButton!
     @IBOutlet weak var videoButton1: UIButton!
+    @IBOutlet weak var videoButton2: UIButton!
+    @IBOutlet weak var videoButton3: UIButton!
+    @IBOutlet weak var videoButton4: UIButton!
+    @IBOutlet weak var videoButton5: UIButton!
+    @IBOutlet weak var videoButton6: UIButton!
+    @IBOutlet weak var videoButton7: UIButton!
+    @IBOutlet weak var videoButton8: UIButton!
+    @IBOutlet weak var videoButton9: UIButton!
+    
     
     var selectedImage: UIImage?
     var passedCategory: String?
     var passedTID: String?
     
     let reference = Database.database().reference()
+    
     
     let videoImageView: UIImageView = {
         let imageView = UIImageView()
@@ -52,6 +61,7 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        calculate()
         
         print("これは受け渡されたcategoryです！：\(passedCategory)")
 
@@ -99,6 +109,7 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
         
         let howManyDaysToSendLabel = UILabel(frame: CGRect(x:20, y:view1.frame.size.height / 2, width:150, height:30))
         howManyDaysToSendLabel.text = "通常二日でお届け"
+        howManyDaysToSendLabel.translatesAutoresizingMaskIntoConstraints = false
         howManyDaysToSendLabel.textAlignment = .center
         howManyDaysToSendLabel.font = UIFont.systemFont(ofSize: 12)
         howManyDaysToSendLabel.textColor = UIColor(hex: "8F8F8F", alpha: 1)
@@ -165,10 +176,37 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
             let detailText: String = snapshot.value as! String
             self.profileDetailLabel.text = detailText
         }
+        videoButton0.imageView?.contentMode = .scaleAspectFill
+        videoButton0.layer.cornerRadius = 8
+        videoButton1.imageView?.contentMode = .scaleAspectFill
+        videoButton1.layer.cornerRadius = 8
+        videoButton2.imageView?.contentMode = .scaleAspectFill
+        videoButton2.layer.cornerRadius = 8
+        videoButton3.imageView?.contentMode = .scaleAspectFill
+        videoButton3.layer.cornerRadius = 8
+        videoButton4.imageView?.contentMode = .scaleAspectFill
+        videoButton4.layer.cornerRadius = 8
+        videoButton5.imageView?.contentMode = .scaleAspectFill
+        videoButton5.layer.cornerRadius = 8
+        videoButton6.imageView?.contentMode = .scaleAspectFill
+        videoButton6.layer.cornerRadius = 8
+        videoButton7.imageView?.contentMode = .scaleAspectFill
+        videoButton7.layer.cornerRadius = 8
+        videoButton8.imageView?.contentMode = .scaleAspectFill
+        videoButton8.layer.cornerRadius = 8
+        videoButton9.imageView?.contentMode = .scaleAspectFill
+        videoButton9.layer.cornerRadius = 8
         
-        setThumbnail()
+        //refreshControl
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        scrollView.refreshControl = refreshControl
         
-        
+    }
+    
+    @objc func refresh(sender : UIRefreshControl) {
+        scrollView.reloadInputViews()
+        sender.endRefreshing()
     }
     
 //    let gradientLayer: CAGradientLayer = {
@@ -189,7 +227,6 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
                     return
                 }
                 DispatchQueue.main.async {
-                    print("順調だよ！")
                     self.profileImage.image = UIImage(data: data!)
                 }
             }.resume()
@@ -228,13 +265,9 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
     }
     }
     
-    func setThumbnail() {
-        if let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/push-bc760.appspot.com/o/IMG_5423.MOV?alt=media&token=b4027c05-538e-4edf-b312-3c5d55e4f84d") {
-            let image = thumnailImageForFileUrl(fileUrl: url)
-//            image?.imageOrientation = image!.imageOrientation
-            self.videoButton1.setImage(image, for: .normal)
-        }
-    }
+    
+    
+    
     
     
     func updateNameCategoryLabel(){
@@ -301,16 +334,348 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
         present(loginController, animated: true, completion: nil)
     }
     
+//    @IBAction func videoButton1(_ sender: Any) {
+//
+////        let urlRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL/4")
+////        urlRef.observe(.value) { (snapshot) in
+////
+////            let a = snapshot.value as! String
+////            if let url = URL(string: a){
+////                let video = AVPlayer(url: url)
+////                    let videoPlayer = AVPlayerViewController()
+////                    videoPlayer.player = video
+////                    self.present(videoPlayer, animated: true) {
+////                        video.play()
+////                    }
+////                  }
+////              }
+//
+//        let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
+//        videoRef.observe(.value) { (snapshot) in
+//            let numChildren = Int(snapshot.childrenCount)
+//            if numChildren <= 10 {
+//                for i in (1...numChildren).reversed(){
+//                    videoRef.child("\(i)").observe(.value, with: { (snapshot) in
+//                        if let url: URL = URL(string: snapshot.value as! String){
+//                            self.videoPlay(url: url)
+//                            //このURLをAVPlayerに代入して、各ボタンを押した時に再生されるようにしたい
+//
+//                            //addTargetのセレクターでurlを渡そうと試みたが、セレクターに任意の変数は渡せないらしい。。。
+//                            //                            button.addTarget(self, action: #selector(self.videoPlay(_: url)), for .touchUpInside)
+//                            //                            self.video(index: i, reference: videoRef)
+//
+//                        }
+//
+//                    }
+//                    )}
+//            }else{
+//                for i in (numChildren...numChildren - 10).reversed() {
+//                    videoRef.child("\(i)").observe(.value, with: { (snapshot) in
+//                        if let url: URL = URL(string: snapshot.value as! String){
+//                            let image = self.thumnailImageForFileUrl(fileUrl: url)
+//
+//                            //for文が回った回数-1がarrayのindexに対応すれば良い
+//                            var index = 0
+//                            index = index + 1
+//                            //このURLをAVPlayerに代入して、各ボタンを押した時に再生されるようにしたい
+//
+//                            //self.video(index: i, reference: videoRef)
+//
+//                        }
+//
+//                    })
+//                }
+//            }
+//        }
+//
+//          }
+    @IBAction func videoButton0(_ sender: Any) {
+        let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
+        videoRef.observe(.value) { (snapshot) in
+            let numChildren = Int(snapshot.childrenCount)
+            //videoURLが10個かそれ以下の時
+            if numChildren >= 1 {
+                videoRef.child("1").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: (snapshot.value as! String)){
+                        self.videoPlay(url: url)
+                    }
+                }
+                    
+                )}
+            //videoURLが10個以上の時
+            else{
+                videoRef.child("\(numChildren - 9)").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: snapshot.value as! String){
+                        self.videoPlay(url: url)
+                    }
+                    
+                })
+            }
+            
+        }
+    }
+    
     @IBAction func videoButton1(_ sender: Any) {
-        if let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/push-bc760.appspot.com/o/SampleVideo_1280x720_10mb.mp4?alt=media&token=4b394063-3ce0-426a-9b28-abd9d2d7a748") {
-            let video = AVPlayer(url: url)
-            let videoPlayer = AVPlayerViewController()
-            videoPlayer.player = video
-            present(videoPlayer, animated: true) {
-                video.play()
+        let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
+        videoRef.observe(.value) { (snapshot) in
+            let numChildren = Int(snapshot.childrenCount)
+            if numChildren >= 2 {
+                videoRef.child("2").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: (snapshot.value as! String)){
+                        self.videoPlay(url: url)
+                    }
+                }
+                    
+                )}
+            else{
+                videoRef.child("\(numChildren - 8)").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: snapshot.value as! String){
+                        self.videoPlay(url: url)
+                    }
+                    
+                })
+            }
+            
+        }
+    }
+    
+    @IBAction func videoButton2(_ sender: Any) {
+        let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
+        videoRef.observe(.value) { (snapshot) in
+            let numChildren = Int(snapshot.childrenCount)
+            if numChildren >= 3 {
+                videoRef.child("3").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: (snapshot.value as! String)){
+                        self.videoPlay(url: url)
+                    }
+                }
+                    
+                )}
+            else{
+                videoRef.child("\(numChildren - 7)").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: snapshot.value as! String){
+                        self.videoPlay(url: url)
+                    }
+                    
+                })
+            }
+            
+        }
+    }
+    
+    @IBAction func videoButton3(_ sender: Any) {
+        let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
+        videoRef.observe(.value) { (snapshot) in
+            let numChildren = Int(snapshot.childrenCount)
+            if numChildren >= 4 {
+                videoRef.child("4").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: (snapshot.value as! String)){
+                        self.videoPlay(url: url)
+                    }
+                }
+                    
+                )}
+            else{
+                videoRef.child("\(numChildren - 6)").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: snapshot.value as! String){
+                        self.videoPlay(url: url)
+                    }
+                    
+                })
+            }
+            
+        }
+    }
+    
+    @IBAction func videoButton4(_ sender: Any) {
+        let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
+        videoRef.observe(.value) { (snapshot) in
+            let numChildren = Int(snapshot.childrenCount)
+            if numChildren >= 5 {
+                videoRef.child("5").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: (snapshot.value as! String)){
+                        self.videoPlay(url: url)
+                    }
+                }
+                    
+                )}
+            else{
+                videoRef.child("\(numChildren - 5)").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: snapshot.value as! String){
+                        self.videoPlay(url: url)
+                    }
+                    
+                })
+            }
+            
+        }
+    }
+    
+    @IBAction func videoButton5(_ sender: Any) {
+        let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
+        videoRef.observe(.value) { (snapshot) in
+            let numChildren = Int(snapshot.childrenCount)
+            if numChildren >= 6 {
+                videoRef.child("6").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: (snapshot.value as! String)){
+                        self.videoPlay(url: url)
+                    }
+                }
+                    
+                )}
+            else{
+                videoRef.child("\(numChildren - 4)").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: snapshot.value as! String){
+                        self.videoPlay(url: url)
+                    }
+                    
+                })
+            }
+            
+        }
+    }
+    
+    @IBAction func videoButton6(_ sender: Any) {
+        let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
+        videoRef.observe(.value) { (snapshot) in
+            let numChildren = Int(snapshot.childrenCount)
+            if numChildren >= 7 {
+                videoRef.child("7").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: (snapshot.value as! String)){
+                        self.videoPlay(url: url)
+                    }
+                }
+                    
+                )}
+            else{
+                videoRef.child("\(numChildren - 3)").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: snapshot.value as! String){
+                        self.videoPlay(url: url)
+                    }
+                    
+                })
+            }
+            
+        }
+    }
+    
+    @IBAction func videoButton7(_ sender: Any) {
+        let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
+        videoRef.observe(.value) { (snapshot) in
+            let numChildren = Int(snapshot.childrenCount)
+            if numChildren >= 8 {
+                videoRef.child("8").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: (snapshot.value as! String)){
+                        self.videoPlay(url: url)
+                    }
+                }
+                    
+                )}
+            else{
+                videoRef.child("\(numChildren - 2)").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: snapshot.value as! String){
+                        self.videoPlay(url: url)
+                    }
+                    
+                })
+            }
+            
+        }
+    }
+    @IBAction func videoButton8(_ sender: Any) {
+        let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
+        videoRef.observe(.value) { (snapshot) in
+            let numChildren = Int(snapshot.childrenCount)
+            if numChildren >= 9 {
+                videoRef.child("9").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: (snapshot.value as! String)){
+                        self.videoPlay(url: url)
+                        //このURLをAVPlayerに代入して、各ボタンを押した時に再生されるようにしたい
+                        
+                        //addTargetのセレクターでurlを渡そうと試みたが、セレクターに任意の変数は渡せないらしい。。。
+                        //                            button.addTarget(self, action: #selector(self.videoPlay(_: url)), for .touchUpInside)
+                        //                            self.video(index: i, reference: videoRef)
+                        
+                    }
+                    
+                }
+                    
+                )}else{
+                videoRef.child("\(numChildren - 1)").observe(.value, with: { (snapshot) in
+                    if let url: URL = URL(string: snapshot.value as! String){
+                        self.videoPlay(url: url)
+                        //for文が回った回数-1がarrayのindexに対応すれば良い
+                        
+                        //self.video(index: i, reference: videoRef)
+                        
+                    }
+                    
+                })
+            }
+            
+        }
+    }
+    
+    @IBAction func videoButton9(_ sender: Any) {
+        let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
+        videoRef.observe(.value) { (snapshot) in
+            let numChildren = Int(snapshot.childrenCount)
+                if numChildren >= 10 {
+                    videoRef.child("10").observe(.value, with: { (snapshot) in
+                        if let url: URL = URL(string: (snapshot.value as! String)){
+                            self.videoPlay(url: url)
+                            //このURLをAVPlayerに代入して、各ボタンを押した時に再生されるようにしたい
+                            
+                            //addTargetのセレクターでurlを渡そうと試みたが、セレクターに任意の変数は渡せないらしい。。。
+                            //                            button.addTarget(self, action: #selector(self.videoPlay(_: url)), for .touchUpInside)
+                            //                            self.video(index: i, reference: videoRef)
+                            
+                        }
+                        
+                    }
+                    
+                    )}else{
+                    videoRef.child("\(numChildren)").observe(.value, with: { (snapshot) in
+                        if let url: URL = URL(string: snapshot.value as! String){
+                            self.videoPlay(url: url)
+                            //for文が回った回数-1がarrayのindexに対応すれば良い
+                            
+                            //self.video(index: i, reference: videoRef)
+                            
+                        }
+                        
+                    })
+                }
+          
+        }
+}
+
+    
+    
+    func video(index: Int, reference: DatabaseReference) {
+        reference.child("\(index)").observe(.value) { (snapshot) in
+            
+            let a = snapshot.value as! String
+            if let url = URL(string: a){
+                let video = AVPlayer(url: url)
+                let videoPlayer = AVPlayerViewController()
+                videoPlayer.player = video
+                self.present(videoPlayer, animated: true) {
+                    video.play()
+                }
             }
         }
     }
+    
+    func playVideo(video: AVPlayer){
+        let videoPlayer = AVPlayerViewController()
+        videoPlayer.player = video
+        self.present(videoPlayer, animated: true) {
+            video.play()
+        }
+        
+    }
+
     
 }
 

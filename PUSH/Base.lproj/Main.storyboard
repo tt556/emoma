@@ -27,17 +27,16 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Dl-tw-GJy">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タレント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szL-ho-Nse">
-                                                        <rect key="frame" x="8" y="17" width="143" height="53"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YouTuber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szL-ho-Nse">
+                                                        <rect key="frame" x="8" y="17" width="144" height="53"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XDN-H8-j2G" customClass="Cell">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XDN-H8-j2G" customClass="Cell">
                                                         <rect key="frame" x="0.0" y="72" width="375" height="150"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.63771814110000002" green="0.7087451816" blue="0.89733147619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="zRO-Ay-6OR">
                                                             <size key="itemSize" width="150" height="150"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -87,13 +86,12 @@
                                                         <rect key="frame" x="8" y="17" width="143" height="53"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="osf-Vh-23x" customClass="Cell">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="osf-Vh-23x" customClass="Cell">
                                                         <rect key="frame" x="0.0" y="72" width="375" height="150"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.63771814110000002" green="0.7087451816" blue="0.89733147619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="MeI-5i-cXx">
                                                             <size key="itemSize" width="150" height="150"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -140,17 +138,16 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sic-tg-LhB">
                                                 <rect key="frame" x="0.0" y="444" width="375" height="222"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タレント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxG-1B-34c">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ライバー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxG-1B-34c">
                                                         <rect key="frame" x="8" y="17" width="143" height="53"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HaV-eF-NY3">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HaV-eF-NY3">
                                                         <rect key="frame" x="0.0" y="72" width="375" height="150"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.63771814110000002" green="0.7087451816" blue="0.89733147619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="yRd-2M-vDi">
                                                             <size key="itemSize" width="150" height="150"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -202,13 +199,12 @@
                                                         <rect key="frame" x="8" y="17" width="143" height="53"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wq4-Kk-4uB">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wq4-Kk-4uB">
                                                         <rect key="frame" x="0.0" y="72" width="375" height="150"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.63771814110000002" green="0.7087451816" blue="0.89733147619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="7ks-eM-o5X">
                                                             <size key="itemSize" width="150" height="150"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -260,13 +256,12 @@
                                                         <rect key="frame" x="8" y="17" width="143" height="53"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kx5-j2-EWx">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kx5-j2-EWx">
                                                         <rect key="frame" x="0.0" y="72" width="375" height="150"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.63771814110000002" green="0.7087451816" blue="0.89733147619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="2HS-LD-L9w">
                                                             <size key="itemSize" width="150" height="150"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -313,7 +308,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.63771814110000002" green="0.7087451816" blue="0.89733147619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="sic-tg-LhB" firstAttribute="leading" secondItem="kVH-qc-za7" secondAttribute="leading" id="0h0-1t-ASG"/>
                                             <constraint firstItem="CJp-bi-A05" firstAttribute="top" secondItem="3Dl-tw-GJy" secondAttribute="bottom" id="0pJ-2a-q9t"/>
@@ -377,6 +372,7 @@
                         <outlet property="collectionView3" destination="HaV-eF-NY3" id="D1g-9I-AEG"/>
                         <outlet property="collectionView4" destination="wq4-Kk-4uB" id="pX3-3o-FEN"/>
                         <outlet property="collectionView5" destination="Kx5-j2-EWx" id="UdX-sV-7pV"/>
+                        <outlet property="scrollView" destination="GPW-Od-08o" id="fO8-8l-a4I"/>
                         <segue destination="2b4-WL-Oti" kind="show" identifier="goToProfile" id="oFV-UW-fX9"/>
                     </connections>
                 </viewController>
@@ -403,10 +399,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前/カテゴリー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7h-Pa-taX">
-                                                <rect key="frame" x="8" y="123" width="151" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前/カテゴリー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7h-Pa-taX">
+                                                <rect key="frame" x="8" y="123" width="180" height="29"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -425,7 +420,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nのリアクション" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-EZ-HLh">
                                                 <rect key="frame" x="8" y="233" width="341" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -445,43 +440,23 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Kq-fd-9S0">
-                                                <rect key="frame" x="0.0" y="291" width="375" height="81"/>
+                                                <rect key="frame" x="0.0" y="284" width="375" height="116"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S02-ue-h9w">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                                                        <rect key="frame" x="0.0" y="-7" width="375" height="123"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最近のPUSH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-2k-PgH">
-                                                <rect key="frame" x="8" y="444" width="367" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最近のビデオ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-2k-PgH">
+                                                <rect key="frame" x="8" y="444" width="367" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOn-4b-K8p">
-                                                <rect key="frame" x="197" y="493" width="170" height="240"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQe-zm-6qW">
-                                                <rect key="frame" x="139" y="1015" width="97" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="add new data!"/>
-                                                <connections>
-                                                    <action selector="testButton:" destination="2b4-WL-Oti" eventType="touchUpInside" id="xdY-CD-EGh"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyU-CY-eeI">
-                                                <rect key="frame" x="163" y="1173" width="48" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Logout"/>
-                                                <connections>
-                                                    <action selector="logOut:" destination="2b4-WL-Oti" eventType="touchUpInside" id="ToK-CM-Ec0"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FC9-se-u3a">
                                                 <rect key="frame" x="220" y="53" width="129" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -499,22 +474,110 @@
                                                     <action selector="followButton:" destination="2b4-WL-Oti" eventType="touchUpInside" id="MRq-zB-h73"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="sKw-fY-lb9">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="sKw-fY-lb9">
                                                 <rect key="frame" x="33" y="21" width="100" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Uuu-PP-qpd"/>
+                                                    <constraint firstAttribute="width" constant="100" id="sZd-ve-SfE"/>
+                                                </constraints>
                                             </imageView>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ae-MC-F2h">
                                                 <rect key="frame" x="8" y="493" width="170" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="image1"/>
                                                 <connections>
+                                                    <action selector="videoButton0:" destination="2b4-WL-Oti" eventType="touchUpInside" id="pev-sc-luT"/>
                                                     <action selector="videoButton1:" destination="2b4-WL-Oti" eventType="touchUpInside" id="O8N-E2-uJg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14u-0P-mn0">
+                                                <rect key="frame" x="197" y="493" width="170" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="image1"/>
+                                                <connections>
+                                                    <action selector="videoButton1:" destination="2b4-WL-Oti" eventType="touchUpInside" id="v9G-Pb-ewP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngg-85-3ur">
+                                                <rect key="frame" x="197" y="741" width="170" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="image1"/>
+                                                <connections>
+                                                    <action selector="videoButton3:" destination="2b4-WL-Oti" eventType="touchUpInside" id="Erz-FT-AvL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNG-KS-OVi">
+                                                <rect key="frame" x="197" y="989" width="170" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="image1"/>
+                                                <connections>
+                                                    <action selector="videoButton5:" destination="2b4-WL-Oti" eventType="touchUpInside" id="ZRl-zd-dZP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-gS-BIx">
+                                                <rect key="frame" x="8" y="989" width="170" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="image1"/>
+                                                <connections>
+                                                    <action selector="videoButton4:" destination="2b4-WL-Oti" eventType="touchUpInside" id="yOh-7L-mYn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQo-uy-9wi">
+                                                <rect key="frame" x="197" y="1237" width="170" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="image1"/>
+                                                <connections>
+                                                    <action selector="videoButton7:" destination="2b4-WL-Oti" eventType="touchUpInside" id="JoZ-Ls-yej"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTy-z9-a1P">
+                                                <rect key="frame" x="8" y="1237" width="170" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="image1"/>
+                                                <connections>
+                                                    <action selector="videoButton6:" destination="2b4-WL-Oti" eventType="touchUpInside" id="aBw-JH-Xfx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiM-VX-kKj">
+                                                <rect key="frame" x="8" y="1485" width="170" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="image1"/>
+                                                <connections>
+                                                    <action selector="videoButton8:" destination="2b4-WL-Oti" eventType="touchUpInside" id="atd-fK-huh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-38-U4L">
+                                                <rect key="frame" x="197" y="1485" width="170" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="image1"/>
+                                                <connections>
+                                                    <action selector="videoButton9:" destination="2b4-WL-Oti" eventType="touchUpInside" id="eIJ-lx-SMU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyU-CY-eeI">
+                                                <rect key="frame" x="154" y="1899" width="48" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Logout"/>
+                                                <connections>
+                                                    <action selector="logOut:" destination="2b4-WL-Oti" eventType="touchUpInside" id="ToK-CM-Ec0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjO-GL-OLR">
+                                                <rect key="frame" x="8" y="740" width="170" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="image1"/>
+                                                <connections>
+                                                    <action selector="videoButton2:" destination="2b4-WL-Oti" eventType="touchUpInside" id="yaX-sh-YCb"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="sKw-fY-lb9" firstAttribute="leading" secondItem="hV4-pn-TJ0" secondAttribute="leading" constant="33" id="C8C-zp-XbK"/>
+                                            <constraint firstItem="sKw-fY-lb9" firstAttribute="top" secondItem="hV4-pn-TJ0" secondAttribute="top" constant="21" id="Gg2-eJ-TWw"/>
+                                            <constraint firstItem="E7h-Pa-taX" firstAttribute="leading" secondItem="hV4-pn-TJ0" secondAttribute="leading" constant="8" id="Z0d-Sq-PEk"/>
                                             <constraint firstAttribute="height" constant="1937" id="ncJ-ME-4Om"/>
+                                            <constraint firstItem="E7h-Pa-taX" firstAttribute="top" secondItem="sKw-fY-lb9" secondAttribute="bottom" constant="2" id="ugr-Mh-sPn"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -544,8 +607,17 @@
                         <outlet property="profileDetailLabel" destination="ioB-0t-zZY" id="581-3L-KVt"/>
                         <outlet property="profileImage" destination="sKw-fY-lb9" id="169-O5-IHo"/>
                         <outlet property="reactionLabel" destination="Ogy-EZ-HLh" id="uf0-TJ-Qxd"/>
-                        <outlet property="scrollView" destination="grv-9D-Kmu" id="LIK-Vb-STs"/>
-                        <outlet property="videoButton1" destination="3ae-MC-F2h" id="JDY-ik-Rji"/>
+                        <outlet property="scrollView" destination="grv-9D-Kmu" id="Sdc-Nz-vcy"/>
+                        <outlet property="videoButton0" destination="3ae-MC-F2h" id="1fc-7J-g0V"/>
+                        <outlet property="videoButton1" destination="14u-0P-mn0" id="GAh-6n-FAe"/>
+                        <outlet property="videoButton2" destination="EjO-GL-OLR" id="pca-3g-1wj"/>
+                        <outlet property="videoButton3" destination="Ngg-85-3ur" id="71o-fb-KVf"/>
+                        <outlet property="videoButton4" destination="WhS-gS-BIx" id="GBv-1N-Aaj"/>
+                        <outlet property="videoButton5" destination="hNG-KS-OVi" id="LS4-S1-3Ep"/>
+                        <outlet property="videoButton6" destination="BTy-z9-a1P" id="Ms5-Ct-q77"/>
+                        <outlet property="videoButton7" destination="QQo-uy-9wi" id="RGb-nj-jH6"/>
+                        <outlet property="videoButton8" destination="NiM-VX-kKj" id="uPi-aN-vpF"/>
+                        <outlet property="videoButton9" destination="OfN-38-U4L" id="6Ge-0Y-OVK"/>
                         <outlet property="view2" destination="I0b-KS-0Yj" id="als-g3-9Gh"/>
                         <segue destination="d0J-0q-nIV" kind="show" identifier="goToInfomationController" id="KR7-f5-dRB"/>
                     </connections>
@@ -645,6 +717,9 @@
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
