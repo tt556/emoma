@@ -49,8 +49,7 @@ class ViewController: UIViewController {
         self.collectionView5.dataSource = self
         
         navigationController?.setNavigationBarHidden(true, animated: false)
-        self.automaticallyAdjustsScrollViewInsets = false
-
+        scrollView.contentInsetAdjustmentBehavior = .never
         //refreshControl
         scrollView.refreshControl = refreshControl
         refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新")

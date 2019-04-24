@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PUSH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewController" id="BYZ-38-t0r" customClass="ViewController" customModule="PUSH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1332"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,8 +363,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="mIy-bc-MCA"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="zV8-Zl-AlY">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="1" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="aoL-Ea-Mse"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="1332"/>
                     <connections>
                         <outlet property="collectionView1" destination="XDN-H8-j2G" id="wpL-Ft-lQQ"/>
@@ -389,7 +393,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grv-9D-Kmu">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1937"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1888"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hV4-pn-TJ0">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1937"/>
@@ -425,7 +429,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzR-Dg-G2n">
-                                                <rect key="frame" x="8" y="398" width="184" height="30"/>
+                                                <rect key="frame" x="8" y="406" width="184" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="全てのリアクションを見る"/>
                                                 <connections>
@@ -433,19 +437,31 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5d-3s-j8x">
-                                                <rect key="frame" x="129" y="262" width="24" height="21"/>
+                                                <rect key="frame" x="129" y="256" width="24" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Kq-fd-9S0">
-                                                <rect key="frame" x="0.0" y="284" width="375" height="116"/>
+                                                <rect key="frame" x="0.0" y="285" width="375" height="127"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S02-ue-h9w">
-                                                        <rect key="frame" x="0.0" y="-7" width="375" height="123"/>
+                                                        <rect key="frame" x="0.0" y="-12" width="375" height="139"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HO4-Zq-s2x">
+                                                                <rect key="frame" x="22" y="8" width="331" height="123"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.75" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
                                                     </scrollView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -482,92 +498,92 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ae-MC-F2h">
-                                                <rect key="frame" x="8" y="493" width="170" height="240"/>
+                                                <rect key="frame" x="8" y="493" width="175" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="image1"/>
+                                                <state key="normal" title="Button" image="emoma!"/>
                                                 <connections>
                                                     <action selector="videoButton0:" destination="2b4-WL-Oti" eventType="touchUpInside" id="pev-sc-luT"/>
                                                     <action selector="videoButton1:" destination="2b4-WL-Oti" eventType="touchUpInside" id="O8N-E2-uJg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14u-0P-mn0">
-                                                <rect key="frame" x="197" y="493" width="170" height="240"/>
+                                                <rect key="frame" x="191" y="493" width="175" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="image1"/>
+                                                <state key="normal" title="Button" image="emoma!"/>
                                                 <connections>
                                                     <action selector="videoButton1:" destination="2b4-WL-Oti" eventType="touchUpInside" id="v9G-Pb-ewP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngg-85-3ur">
-                                                <rect key="frame" x="197" y="741" width="170" height="240"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="image1"/>
-                                                <connections>
-                                                    <action selector="videoButton3:" destination="2b4-WL-Oti" eventType="touchUpInside" id="Erz-FT-AvL"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNG-KS-OVi">
-                                                <rect key="frame" x="197" y="989" width="170" height="240"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="image1"/>
-                                                <connections>
-                                                    <action selector="videoButton5:" destination="2b4-WL-Oti" eventType="touchUpInside" id="ZRl-zd-dZP"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-gS-BIx">
-                                                <rect key="frame" x="8" y="989" width="170" height="240"/>
+                                                <rect key="frame" x="8" y="989" width="175" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="image1"/>
+                                                <state key="normal" title="Button" image="emoma!"/>
                                                 <connections>
                                                     <action selector="videoButton4:" destination="2b4-WL-Oti" eventType="touchUpInside" id="yOh-7L-mYn"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQo-uy-9wi">
-                                                <rect key="frame" x="197" y="1237" width="170" height="240"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="image1"/>
-                                                <connections>
-                                                    <action selector="videoButton7:" destination="2b4-WL-Oti" eventType="touchUpInside" id="JoZ-Ls-yej"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTy-z9-a1P">
-                                                <rect key="frame" x="8" y="1237" width="170" height="240"/>
+                                                <rect key="frame" x="8" y="1237" width="175" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="image1"/>
+                                                <state key="normal" title="Button" image="emoma!"/>
                                                 <connections>
                                                     <action selector="videoButton6:" destination="2b4-WL-Oti" eventType="touchUpInside" id="aBw-JH-Xfx"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiM-VX-kKj">
-                                                <rect key="frame" x="8" y="1485" width="170" height="240"/>
+                                                <rect key="frame" x="8" y="1485" width="175" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="image1"/>
+                                                <state key="normal" title="Button" image="emoma!"/>
                                                 <connections>
                                                     <action selector="videoButton8:" destination="2b4-WL-Oti" eventType="touchUpInside" id="atd-fK-huh"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-38-U4L">
-                                                <rect key="frame" x="197" y="1485" width="170" height="240"/>
+                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjO-GL-OLR">
+                                                <rect key="frame" x="8" y="740" width="175" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="image1"/>
+                                                <state key="normal" title="Button" image="emoma!"/>
+                                                <connections>
+                                                    <action selector="videoButton2:" destination="2b4-WL-Oti" eventType="touchUpInside" id="yaX-sh-YCb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngg-85-3ur">
+                                                <rect key="frame" x="191" y="740" width="175" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="emoma!"/>
+                                                <connections>
+                                                    <action selector="videoButton3:" destination="2b4-WL-Oti" eventType="touchUpInside" id="Erz-FT-AvL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNG-KS-OVi">
+                                                <rect key="frame" x="191" y="988" width="175" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="emoma!"/>
+                                                <connections>
+                                                    <action selector="videoButton5:" destination="2b4-WL-Oti" eventType="touchUpInside" id="ZRl-zd-dZP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQo-uy-9wi">
+                                                <rect key="frame" x="191" y="1236" width="175" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="emoma!"/>
+                                                <connections>
+                                                    <action selector="videoButton7:" destination="2b4-WL-Oti" eventType="touchUpInside" id="JoZ-Ls-yej"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-38-U4L">
+                                                <rect key="frame" x="191" y="1484" width="175" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="emoma!"/>
                                                 <connections>
                                                     <action selector="videoButton9:" destination="2b4-WL-Oti" eventType="touchUpInside" id="eIJ-lx-SMU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyU-CY-eeI">
-                                                <rect key="frame" x="154" y="1899" width="48" height="30"/>
+                                                <rect key="frame" x="163" y="1733" width="48" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Logout"/>
                                                 <connections>
                                                     <action selector="logOut:" destination="2b4-WL-Oti" eventType="touchUpInside" id="ToK-CM-Ec0"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjO-GL-OLR">
-                                                <rect key="frame" x="8" y="740" width="170" height="240"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="image1"/>
-                                                <connections>
-                                                    <action selector="videoButton2:" destination="2b4-WL-Oti" eventType="touchUpInside" id="yaX-sh-YCb"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -625,6 +641,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7p5-5m-f0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="10120.799999999999" y="180.35982008995504"/>
+        </scene>
+        <!--Setting Controller-->
+        <scene sceneID="fB5-8c-4ed">
+            <objects>
+                <viewController id="xzQ-ht-cMx" customClass="SettingController" customModule="PUSH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MaI-G9-ToL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="506-L7-NtZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="hMK-Ge-oRC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7F-ED-wE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9273" y="1150"/>
         </scene>
         <!--Information Controller-->
         <scene sceneID="mkK-YW-bwY">
@@ -817,6 +849,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2wf-Rk-wif"/>
+                        <segue destination="xzQ-ht-cMx" kind="relationship" relationship="viewControllers" id="eTG-v8-9dT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ntr-QD-voG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -825,6 +858,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="emoma!" width="175" height="240"/>
         <image name="image1" width="1000" height="999"/>
     </resources>
 </document>

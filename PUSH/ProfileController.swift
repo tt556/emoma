@@ -12,7 +12,6 @@ import AVFoundation
 import AVKit
 
 class ProfileController: UIViewController, UIScrollViewDelegate {
-    
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -61,6 +60,7 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         calculate()
         
         print("これは受け渡されたcategoryです！：\(passedCategory)")
