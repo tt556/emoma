@@ -22,6 +22,7 @@ extension ProfileController {
         let videoRef = reference.child("talents/category/\(passedCategory!)/\(passedTID!)/videoURL")
         videoRef.observe(.value) { (snapshot) in
             let numChildren = Int(snapshot.childrenCount)
+            
             if numChildren <= 10 {
                 for i in (1...numChildren).reversed(){
                     videoRef.child("\(i)").observe(.value, with: { (snapshot) in

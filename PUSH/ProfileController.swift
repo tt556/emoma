@@ -103,9 +103,10 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
         view1.layer.addSublayer(topBorder)
 
         
-        let priceLabel = UILabel(frame: CGRect(x:20, y:view1.frame.size.height / 5, width:150, height:30))
+        let priceLabel = UILabel(frame: CGRect(x:5, y:view1.frame.size.height / 5, width:150, height:30))
         priceLabel.text = "3000円"
         priceLabel.textColor = UIColor(hex: "FC437B", alpha: 1)
+        priceLabel.textAlignment = NSTextAlignment.center
         
         let howManyDaysToSendLabel = UILabel(frame: CGRect(x:20, y:view1.frame.size.height / 2, width:150, height:30))
         howManyDaysToSendLabel.text = "通常二日でお届け"
@@ -151,7 +152,9 @@ class ProfileController: UIViewController, UIScrollViewDelegate {
         view1.addSubview(priceLabel)
         view1.addSubview(howManyDaysToSendLabel)
         
-        howManyDaysToSendLabel.centerYAnchor.constraint(equalTo: purchaseButton.centerYAnchor).isActive = true
+        howManyDaysToSendLabel.centerXAnchor.constraint(equalTo: priceLabel.centerXAnchor).isActive = true
+        howManyDaysToSendLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 4).isActive = true
+        
 
         view.addSubview(view1)
         view.addSubview(videoImageView)

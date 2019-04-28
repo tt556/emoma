@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView4: UICollectionView!
     @IBOutlet weak var collectionView5: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     let storage = Storage.storage()
     let db = Firestore.firestore()
@@ -50,6 +51,12 @@ class ViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(true, animated: false)
         scrollView.contentInsetAdjustmentBehavior = .never
+        
+        searchBar.layer.shadowColor = UIColor.lightGray.cgColor
+        searchBar.layer.shadowOpacity = 0.5
+        searchBar.layer.masksToBounds = false
+        
+
         //refreshControl
         scrollView.refreshControl = refreshControl
         refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新")
