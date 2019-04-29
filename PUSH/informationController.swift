@@ -19,6 +19,12 @@ class informationController: UIViewController {
     @IBOutlet weak var toTextField1: UITextField!
     var users = [User]()
     var passedTID: String? = nil
+    let publishableKey = "pk_test_QJEarN1JjibVSItD1ehS0zac00W80CFyt4"
+    let stripeCustomer = StripeCustomer()
+
+    
+    let defaultStore = Firestore.firestore()
+    
     
     let view1: UIView = {
         let view = UIView()
@@ -58,6 +64,7 @@ class informationController: UIViewController {
         let orderController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "orderController")
 
         inputOrderText(TID: passedTID!)
+        writeCustomerDataToFirestore(amount: 2000, currency: "JPY")
         self.show(orderController, sender: self)
     }
     
@@ -109,7 +116,6 @@ class informationController: UIViewController {
         orderView.isHidden = true
         
         fetchUserProfileImage()
-        
         
         
         }

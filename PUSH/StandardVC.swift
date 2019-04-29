@@ -56,7 +56,13 @@ class StandardVC: UIViewController, STPAddCardViewControllerDelegate {
         dismiss(animated: true)
         
         print("Printing Strip response:\(token.allResponseFields)\n\n")
+        let uid = Auth.auth().currentUser?.uid
+        let storageRef = Firestore.firestore().collection("stripe_customers").document(uid!).collection("sources")
+        storageRef.addDocument(data: token.allResponseFields as! [String : Any])
+        
         print("Printing Strip Token:\(token.tokenId)")
+        let storageRef2 = Firestore.firestore().collection("stripe_customers").document(uid!).collection("tokens")
+        storageRef2.addDocument(data: ["token": token.tokenId])
         
         msgBox.text = "Transaction success! \n\nHere is the Token: \(token.tokenId)\nCard Type: \(token.card!.funding.rawValue)\n\nSend this token or detail to your backend server to complete this payment."
         

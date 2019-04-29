@@ -64,6 +64,8 @@ class ViewController: UIViewController {
         scrollView.addSubview(refreshControl)
         
         checkIfUserIsLoggedIn()
+        print("今のユーザーーーーーーーーー〜〜ーーーい",print(Auth.auth().currentUser?.uid)
+)
         
     }
     

@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B235D130E562BA148CE53204 /* Pods_PUSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DEEB1E2EB541F78FC5E17F /* Pods_PUSH.framework */; };
-		FF0C3A672275F5F4005F93BB /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C3A662275F5F4005F93BB /* TestController.swift */; };
-		FF0C3A692275F6D5005F93BB /* Stripe in Resources */ = {isa = PBXBuildFile; fileRef = FF0C3A682275F6D5005F93BB /* Stripe */; };
 		FF165B39226EFE3000FD9477 /* emoma!.png in Resources */ = {isa = PBXBuildFile; fileRef = FF165B38226EFE3000FD9477 /* emoma!.png */; };
 		FF165B3B226F212400FD9477 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF165B3A226F212400FD9477 /* SettingController.swift */; };
 		FF313952225B39ED009D119E /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = FF313951225B39ED009D119E /* Controller */; };
 		FF313956225B3DC1009D119E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF313955225B3DC1009D119E /* LoginController.swift */; };
 		FF313958225B3DD4009D119E /* LoginController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF313957225B3DD4009D119E /* LoginController+handlers.swift */; };
 		FF31395A225B52E4009D119E /* Model in Resources */ = {isa = PBXBuildFile; fileRef = FF313959225B52E3009D119E /* Model */; };
+		FF32F7502276986C004ECF46 /* StripeCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32F74F2276986C004ECF46 /* StripeCustomer.swift */; };
 		FF408A23223B84F8003085E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF408A22223B84F8003085E8 /* GoogleService-Info.plist */; };
 		FF4BDD4A22423B2D00D1A5EA /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BDD4922423B2D00D1A5EA /* ProfileController.swift */; };
 		FF751689225B6FAE000C6052 /* informationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF751688225B6FAE000C6052 /* informationController.swift */; };
@@ -36,14 +35,13 @@
 		55DEEB1E2EB541F78FC5E17F /* Pods_PUSH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PUSH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84043BAB543A85D3F29A5239 /* Pods-PUSH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PUSH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PUSH/Pods-PUSH.debug.xcconfig"; sourceTree = "<group>"; };
 		9137FB578A4F1542ECBFB3C2 /* Pods-PUSH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PUSH.release.xcconfig"; path = "Pods/Target Support Files/Pods-PUSH/Pods-PUSH.release.xcconfig"; sourceTree = "<group>"; };
-		FF0C3A662275F5F4005F93BB /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
-		FF0C3A682275F6D5005F93BB /* Stripe */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Stripe; sourceTree = "<group>"; };
 		FF165B38226EFE3000FD9477 /* emoma!.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoma!.png"; sourceTree = "<group>"; };
 		FF165B3A226F212400FD9477 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		FF313951225B39ED009D119E /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
 		FF313955225B3DC1009D119E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Controller/LoginController.swift; sourceTree = "<group>"; };
 		FF313957225B3DD4009D119E /* LoginController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LoginController+handlers.swift"; path = "Controller/LoginController+handlers.swift"; sourceTree = "<group>"; };
 		FF313959225B52E3009D119E /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
+		FF32F74F2276986C004ECF46 /* StripeCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeCustomer.swift; sourceTree = "<group>"; };
 		FF408A22223B84F8003085E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF4BDD4922423B2D00D1A5EA /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		FF4BDD8D2244006400D1A5EA /* PUSH-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PUSH-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 		FFDB75A7222940060084A90E /* PUSH */ = {
 			isa = PBXGroup;
 			children = (
-				FF0C3A682275F6D5005F93BB /* Stripe */,
 				FF165B38226EFE3000FD9477 /* emoma!.png */,
 				FF82CBBF227068480045B8C8 /* 人物アイコン (4).png */,
 				FF313959225B52E3009D119E /* Model */,
@@ -127,9 +124,9 @@
 				FFA30C47226B803000028248 /* AVAsset+.swift */,
 				FF751688225B6FAE000C6052 /* informationController.swift */,
 				FF75168C225DF941000C6052 /* InfomationController+handlers.swift */,
+				FF32F74F2276986C004ECF46 /* StripeCustomer.swift */,
 				FF165B3A226F212400FD9477 /* SettingController.swift */,
 				FF9ED86D2270C0FF00D498E1 /* StandardVC.swift */,
-				FF0C3A662275F5F4005F93BB /* TestController.swift */,
 				FF313951225B39ED009D119E /* Controller */,
 				FF4BDD8D2244006400D1A5EA /* PUSH-Bridging-Header.h */,
 				FFDB75AC222940070084A90E /* Main.storyboard */,
@@ -209,7 +206,6 @@
 				FF82CBC0227068490045B8C8 /* 人物アイコン (4).png in Resources */,
 				FFDB75AE222940070084A90E /* Main.storyboard in Resources */,
 				FF165B39226EFE3000FD9477 /* emoma!.png in Resources */,
-				FF0C3A692275F6D5005F93BB /* Stripe in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +293,7 @@
 				FFA30C48226B803100028248 /* AVAsset+.swift in Sources */,
 				FF75168D225DF942000C6052 /* InfomationController+handlers.swift in Sources */,
 				FF313958225B3DD4009D119E /* LoginController+handlers.swift in Sources */,
-				FF0C3A672275F5F4005F93BB /* TestController.swift in Sources */,
+				FF32F7502276986C004ECF46 /* StripeCustomer.swift in Sources */,
 				FF75168B225DCE7B000C6052 /* User.swift in Sources */,
 				FFDB75AB222940070084A90E /* ViewController.swift in Sources */,
 				FFDB75A9222940060084A90E /* AppDelegate.swift in Sources */,

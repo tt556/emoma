@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Stripe
 
 extension informationController {
     
@@ -103,4 +104,77 @@ extension informationController {
             }
         }
     }
+    //こっからはstripeのテスト関数
+    
+//    func TestSaveUIDToFireStore(){
+//        var uid = Auth.auth().currentUser?.uid
+//        let data = stripeCustomer.data
+//        defaultStore.collection("stripe_customers").document(uid!).setData(data){ err in
+//            if let err = err {
+//                print("Error writing document: \(err)")
+//            } else {
+//                print("Document successfully written!")
+//            }
+//        }
+//    }
+    
+//    func TestCreateSources(){
+//        var uid = Auth.auth().currentUser?.uid
+//        var data = stripeCustomer.data
+//        defaultStore.collection("stripe_customers").document(uid!).collection("sources").addSnapshotListener { (querySnapshot, error) in
+//
+//            guard let documents = querySnapshot?.documents else {
+//                print("Error fetching documents: \(error!)")
+//                return
+//            }
+//            for i in 0 ..< documents.count {
+//                var newSource: [String: Any] = [:]
+//                let documentID = documents[i].documentID
+//                newSource[documentID] = documents[i].data()
+//                data["sources"] = newSource
+//
+//                print("Sources \(data["sources"])")
+//            }
+//        }
+//    }
+//
+//    func TestCreateCharges(){
+//        var uid = Auth.auth().currentUser?.uid
+//        var data = stripeCustomer.data
+//        defaultStore.collection("stripe_customers").document(uid!).collection("charges").addSnapshotListener { (querySnapshot, error) in
+//
+//            guard let documents = querySnapshot?.documents else {
+//                print("Error fetching documents: \(error!)")
+//                return
+//            }
+//            for i in 0 ..< documents.count {
+//                var newCharges: [String: Any] = [:]
+//                let documentID = documents[i].documentID
+//                newCharges[documentID] = documents[i].data()
+//                data["charges"] = newCharges
+//
+//                print("Charges \(data["charges"])")
+//            }
+//        }
+//    }
+    
+    
+    
+
+    
+    func writeCustomerDataToFirestore(amount: Int, currency: String){
+        let data:[String: Any] = [
+            "amount": amount,
+            "currency": currency
+        ]
+        if let uid = Auth.auth().currentUser?.uid{
+
+            defaultStore.collection("stripe_customers").document(uid).collection("charges").addDocument(data: data)
+        }else{
+            print("uid取得失敗")
+        }
+    }
+    
+    
+    
 }
